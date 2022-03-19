@@ -20,18 +20,24 @@
         }
 
         $valor_busca = $_POST["valor_busca"];
-        
+        $existe = false;
         //var_dump($vetor);
         foreach($vetor as $chave => $valor){
             
             if ($valor == $valor_busca){
                 echo "Posição do Vetor: $chave  Número repetido: $valor";
                 echo "<br>"; 
-               
+                $existe = true;
+                
+              
             }
             
+            
+        
         }
-
+        if ($existe == false){
+            echo "Número não existe";
+            }
 
     ?>
 
