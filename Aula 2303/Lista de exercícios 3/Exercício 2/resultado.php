@@ -16,8 +16,8 @@
     <?php
         for ($nome=1; $nome<=10; $nome++);
         
-        $array = $_POST[$nome];
-        sort($array);
+        $letra = $_POST['nome'];
+        sort($letra);
     ?>
 
     <!-- Optional JavaScript; choose one of the two! -->
