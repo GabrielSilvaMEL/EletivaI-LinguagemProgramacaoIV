@@ -13,12 +13,26 @@
   <body class="container">
     <h1>Resposta exercício 2</h1>
 
+
+
     <?php
-        for ($nome=1; $nome<=10; $nome++);
+
+    for ($i=1; $i<=10; $i++){
+        $vetor[$i] = $_POST["nome$i"];
         
-        $letra = $_POST['nome'];
-        sort($letra);
-    ?>
+    }
+    function ordenar($vetor)
+        {
+          sort($vetor);
+          foreach($vetor as $valor){
+            echo "Posição do Vetor: $valor";
+            echo "<br>";
+          }
+          
+        }
+    ordenar($vetor)
+
+    ?>  
 
     <!-- Optional JavaScript; choose one of the two! -->
 

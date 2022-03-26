@@ -10,17 +10,27 @@
 
     <title>Exercício 2</title>
   </head>
-  <body>
+  <body class="container">
     <h1>Exercício 2</h1>
 
 
-    <form action="resultado.php" method="POST">
+    <form action="resultado.php" method="post">
         <div class="row">
+        <?php
+          for ($i=1; $i<=10; $i++){
+        ?>
+          
           <div class="col">
-            <label for="nome" class="label-control">Digite seu nome:</label>
-            <input type="text" class="form-control" id="nome" name="nome"/>
+            <label for="nome<?= $i ?>" class="label-control">Digite seu nome:<?= $i ?></label>
+            <input type="text" class="form-control" id="nome<?= $i ?>" name="nome<?= $i ?>"/>
           </div>
-
+        </div>
+        <?php } ?>
+        <div class="row">
+        <div class="col">
+          <button class="btn btn-primary">Enviar</button>
+        </div>
+      </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
