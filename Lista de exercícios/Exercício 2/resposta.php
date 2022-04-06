@@ -8,11 +8,22 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Resposta exercício 2 lista 2</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <h1>Resposta exercício 2</h1>
 
+
+    <?php
+      $valorkg = $_POST['valorkg'];
+      $consumido = $_POST['consumido'];
+
+      $valorfinal = $valorkg * $consumido;
+
+      echo "O valor do quilo é $valorkg e foram consumidos $consumido kg. ";
+      echo "O valor total a ser pago é $valorfinal ";
+
+    ?>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
