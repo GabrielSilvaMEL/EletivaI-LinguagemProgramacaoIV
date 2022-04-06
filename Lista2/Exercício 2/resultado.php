@@ -30,7 +30,6 @@
                 $existe = true;          
             }   
         }
-        for
         if ($existe == false){
             echo "Número não existe";
             }
