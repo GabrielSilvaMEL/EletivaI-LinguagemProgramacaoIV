@@ -13,6 +13,32 @@
   <body>
     <h1>Hello, world!</h1>
 
+    <form action="resposta.php" method="post">
+      <div class="row">
+        <?php
+          for ($i=1; $i<=20; $i++){
+        ?>
+          <div class="col">
+            <label for="valor<?= $i ?>" class="label-control">
+              Informe o valor <?= $i ?>
+            </label>
+            <input type="number" name="valor<?= $i ?>" 
+              id="valor<?= $i ?>" class="form-control" min="1" max="10"/>
+          </div>
+        <?php
+          }
+        ?>
+        <div class="col">
+            <label for="valor_busca">Informe o valor que você quer encontrar</label>
+            <input type="text" name="valor_busca" id="valor_busca">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-primary">Enviar</button>
+        </div>
+      </div>
+    </form>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

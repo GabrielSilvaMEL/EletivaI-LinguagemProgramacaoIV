@@ -13,16 +13,32 @@
   <body>
     <h1>Hello, world!</h1>
 
+
     <?php
 
-      $array = array( "a", "b", "c", "d");
-      var_dump($array);
+        for ($i=1; $i<=10; $i++){
+            $array[$i] = $_POST["valor$i"];
+        }
+        $valortotal = 0;
+        
+        foreach($array as $chave => $valor){
+            $valortotal = $valor + $valortotal;
+            $media = $valortotal / 10;
+        }
+
+      echo "A média desses valores é: $media";
+        
 
     ?>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+   
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+
+
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->

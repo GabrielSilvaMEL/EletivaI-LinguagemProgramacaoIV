@@ -10,16 +10,31 @@
 
     <title>Hello, world!</title>
   </head>
-  <body>
+  <body class="container">
     <h1>Hello, world!</h1>
 
-    <?php
-
-      $array = array( "a", "b", "c", "d");
-      var_dump($array);
-
-    ?>
-
+    <form action="resposta.php" method="post">
+      <div class="row">
+        <?php
+          for ($i=1; $i<=10; $i++){
+        ?>
+          <div class="col">
+            <label for="valor<?= $i ?>" class="label-control">
+              Informe o valor <?= $i ?>
+            </label>
+            <input type="number" name="valor<?= $i ?>" 
+              id="valor<?= $i ?>" class="form-control"/>
+          </div>
+        <?php
+          }
+        ?>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-primary">Enviar</button>
+        </div>
+      </div>
+    </form>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
