@@ -30,7 +30,7 @@
       elseif (25 >= $imc && 29.9 < $imc){
         echo "Levemente acima do peso";
       }
-      elseif (30 >= $imc && 30.9 < $imc){
+      elseif (30 >= $imc && 34.9 < $imc){
         echo "Obesidade grau 1";
       }
       elseif (35 >= $imc && 39.9 < $imc){
