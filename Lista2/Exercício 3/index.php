@@ -16,7 +16,7 @@
     <form action="resposta.php" method="post">
       <div class="row">
         <?php
-          for ($i=1; $i<=20; $i++){
+          for ($i=1; $i<=5; $i++){
         ?>
           <div class="col">
             <label for="valor<?= $i ?>" class="label-control">
@@ -28,10 +28,7 @@
         <?php
           }
         ?>
-        <div class="col">
-            <label for="valor_busca">Informe o valor que você quer encontrar</label>
-            <input type="text" name="valor_busca" id="valor_busca">
-        </div>
+
       </div>
       <div class="row">
         <div class="col">

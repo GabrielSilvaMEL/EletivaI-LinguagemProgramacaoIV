@@ -1,11 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <title>Hello, world!</title>
@@ -15,10 +12,30 @@
 
     <?php
 
-      $array = array( "a", "b", "c", "d");
-      var_dump($array);
+function repetido($numero, $vetor){
+  $valor_repetido = 0;
 
+  foreach($vetor as $valor){
+    if ($valor == $numero){
+        $valor_repetido ++;
+    }
+  }
+  if($valor_repetido > 1)
+  return "-";
+  else
+  return $numero;
+}
+
+  for ($i=1; $i<=5; $i++){
+    $vetor[$i] = $_POST["valor$i"];
+  }
+  foreach($vetor as $chave => $valor){
+      $vetor[$chave] = repetido($valor, $vetor);         
+
+  }
+  var_dump($vetor);
     ?>
+   
 
     <!-- Optional JavaScript; choose one of the two! -->
 
