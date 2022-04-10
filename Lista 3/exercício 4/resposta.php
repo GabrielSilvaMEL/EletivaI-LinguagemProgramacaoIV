@@ -1,45 +1,39 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Resposta exercício 4</title>
   </head>
-  <body>
-    <h1>Hello, world!</h1>
+  <body class="container">
+    <h1>Resposta exercício 4</h1>
 
     <?php
 
-function repetido($numero, $vetor){
-  $valor_repetido = 0;
-
-  foreach($vetor as $valor){
-    if ($valor == $numero){
-        $valor_repetido ++;
+    $valor = 0;
+    function soma($valor){
+      $soma = 0;
+      for ($i = 1; $i < $valor; $i++){
+        if ($valor % $i == 0){
+          $soma += $i;
+        }
+      }
+      return $soma;
     }
-  }
-  if($valor_repetido > 1)
-  return "-";
-  else
-  return $numero;
-}
-
-  for ($i=1; $i<=5; $i++){
-    $vetor[$i] = $_POST["valor$i"];
-  }
-  foreach($vetor as $chave => $valor){
-      $vetor[$chave] = repetido($valor, $vetor);         
-  }
-  
-  var_dump($vetor);
+    for ($i=1; $i<=5; $i++){
+        $vetor[$i] = $_POST["valor$i"];
+        echo soma($vetor[$i]);
+        echo "<br>";
+    }
     ?>
-   
 
-    <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
