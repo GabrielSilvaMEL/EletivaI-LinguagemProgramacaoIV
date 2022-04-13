@@ -21,13 +21,13 @@
         for ($i=1; $i<=$Nvoltas; $i++){
             $array[$i] = $_POST["valor$i"];
             }
-        $melhor_volta = 0;
+        $melhor_volta = $array[1];
         $melhor_posicao = 1;
         $media = 0;
           foreach($array as $chave => $valor)
           {          
             $media += $valor;
-            if ($melhor_volta < $valor) {
+            if ($melhor_volta > $valor) {
               $melhor_volta = $valor;
               $melhor_posicao = $chave;
             }
