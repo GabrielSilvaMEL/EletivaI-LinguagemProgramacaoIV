@@ -22,18 +22,22 @@
             $array[$i] = $_POST["valor$i"];
             }
         $melhor_volta = 0;
-        $melhor_posicao = 99999;
+        $melhor_posicao = 1;
+        $media = 0;
           foreach($array as $chave => $valor)
           {          
-            
+            $media += $valor;
             if ($melhor_volta < $valor) {
               $melhor_volta = $valor;
               $melhor_posicao = $chave;
             }
           }
+
+       
         echo "A melhor volta é: $melhor_volta <br>";
         echo "Na posição $melhor_posicao <br>";
-        var_dump($array);
+        echo "A média de voltas é: ".number_format($media/$Nvoltas,1);
+        echo "<br>";
     ?>
 
    
