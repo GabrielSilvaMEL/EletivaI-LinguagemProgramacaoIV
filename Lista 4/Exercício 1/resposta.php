@@ -15,46 +15,22 @@
 
 
     <?php
+      session_start();
+      $Nvoltas = $_SESSION["Nvoltas"];
 
-        for ($i=1; $i<=5; $i++){
+        for ($i=1; $i<=$Nvoltas; $i++){
             $array[$i] = $_POST["valor$i"];
-        }
-
-        function ordenar($array)
-        {        
-          $melhor_volta = 0;
-          sort($array);
-          foreach($array as $valor){
-              if ($melhor_volta < $valor){
+            }
+        $melhor_volta = 0;
+        $melhor_posicao = 99999;
+          foreach($array as $chave => $valor)
+          {          
+            
+            if ($melhor_volta < $valor) {
               $melhor_volta = $valor;
+              $melhor_posicao = $chave;
+            }
           }
-        } 
-        return $melhor_volta;     
-        }
-
-        function posicao($array)
-        {        
-          $melhor_volta = 0;
-          $melhorposicao = 0;
-          sort($array);
-          foreach($array as $chave => $valor){
-              if ($melhor_volta < $valor){
-              $melhor_volta = $valor;
-              $melhorposicao = $chave; // Nao consegui fazer a lógica de mostra em qual chave está a melhorposicao
-          }
-          return $melhorposicao;
-        } 
-        return $melhor_volta;     
-        }
-
-
-        posicao($array);
-        ordenar($array);
-
-        $melhor_posicao = posicao($array);
-        $melhor_volta = ordenar($array);
-        
-        
         echo "A melhor volta é: $melhor_volta <br>";
         echo "Na posição $melhor_posicao <br>";
         var_dump($array);
