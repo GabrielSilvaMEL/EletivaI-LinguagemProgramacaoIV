@@ -3,7 +3,7 @@
     Class Ponto{
         private $x;
         private $y;
-        private static $contador;
+        private static $contador = 0;
 
 
         //construtor
@@ -11,6 +11,7 @@
         {
             $this->setX($x);
             $this->setY($y);
+            self::setContador();
             
         }
         public function calcularDistancia(Ponto $p){
@@ -24,6 +25,14 @@
             $valorY = pow(($y2->getY()- $this->y),2);
             return sqrt($valorX + $valorY);
         }
+
+        //"Calcular distância 3" que informa os 4 valores
+        public function calcularDistancia3($x1,$x2,$y1,$y2){
+            $valorX = pow(($x2-$x1), 2);
+            $valorY = pow(($y2-$y1), 2);
+            return sqrt($valorX + $valorY);
+        }
+
         //Usa-se $this para acessar propriedades e métodos que fazem escopo de um objeto. 
         //Usa-se self para acessar propriedades e métodos que fazem parte do escopo da classe.
         private static function setContador(){
