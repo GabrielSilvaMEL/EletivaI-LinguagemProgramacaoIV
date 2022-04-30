@@ -15,8 +15,8 @@
         }
         //Usa-se $this para acessar propriedades e métodos que fazem escopo de um objeto. 
         //Usa-se self para acessar propriedades e métodos que fazem parte do escopo da classe.
-        public static function setContador($contador){
-            self::$contador = $contador;
+        public static function setContador(){
+            self::$contador++;
         }
         public static function getContador(){
             return self:: $contador;
