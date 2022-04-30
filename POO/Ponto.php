@@ -18,6 +18,12 @@
             $valorY = pow(($p->getY()- $this->y),2);
             return sqrt($valorX + $valorY);
         }
+
+        public function calcularDistancia2($x2,$y2){
+            $valorX = pow(($x2->getX()- $this->x), 2);
+            $valorY = pow(($y2->getY()- $this->y),2);
+            return sqrt($valorX + $valorY);
+        }
         //Usa-se $this para acessar propriedades e métodos que fazem escopo de um objeto. 
         //Usa-se self para acessar propriedades e métodos que fazem parte do escopo da classe.
         private static function setContador(){
@@ -26,6 +32,8 @@
         public static function getContador(){
             return self:: $contador;
         }
+
+
         //get e set
         public function getX(){
             return $this->x;
