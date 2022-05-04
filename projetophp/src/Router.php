@@ -55,7 +55,7 @@ class Router
         }
     }
 
-    private function checkUrl(string $route, $path)
+    private function checkUrl(string $route, $path) //expressão regular (difícil)
     {
 
         preg_match_all('/\{([^\}]*)\}/', $route, $variables);
