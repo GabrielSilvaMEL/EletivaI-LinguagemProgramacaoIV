@@ -1,0 +1,15 @@
+{
+    "name": "aluno/g-abriel",
+    "autoload": {
+        "psr-4": {
+            "Aluno\\GAbriel\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "GabrielSilvaMEL",
+            "email": "gabrielsilvaalves3000@outlook.com"
+        }
+    ],
+    "require": {}
+}
