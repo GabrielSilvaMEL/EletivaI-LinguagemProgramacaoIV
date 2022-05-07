@@ -14,7 +14,13 @@
         return "Olá Mundo!";
     });
 
-    $router->get('/exemplo','Aluno\projetophp\Controller\ExercicioController::exibir');
+    $router->get('/exemplo',
+    'Aluno\projetophp\Controller\ExercicioController::exibir');
+
+
+    $router->post("/exemplo-resultado", 
+    'Aluno\projetophp\Controller\ExercicioController::exibirResultado');
+
     //ADICIONAR AS ROTAS VÁLIDAS ACIMA
 
     $result = $router->handler(); //o handler verifica se ta escrito correto com caracteres validos. caso não exista o result devolve true ou false
