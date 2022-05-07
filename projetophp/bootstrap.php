@@ -1,5 +1,5 @@
 <?php
-
+    use Aluno\projetophp\Controller\ExercicioController;
     require_once __DIR__.'/vendor/autoload.php';
 
     //Aqui a gente recupera o que o usuário digitou e qual método HTTP ele utilizou.
@@ -13,6 +13,8 @@
     $router->get('/ola-mundo',function(){
         return "Olá Mundo!";
     });
+
+    $router->get('/exemplo',ExercicioController::exibir());
     //ADICIONAR AS ROTAS VÁLIDAS ACIMA
 
     $result = $router->handler(); //o handler verifica se ta escrito correto com caracteres validos. caso não exista o result devolve true ou false
