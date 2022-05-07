@@ -11,7 +11,23 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <h1>Exemplo</h1>
+    <form action="">
+        <div class="row">
+            <div class="col">
+                <label class="label-control">Valor 1</label>
+                <label class="form-control" name="valor1" type="text"></label>
+
+                <label class="label-control">Valor 2</label>
+                <label class="form-control" name="valor2" type="text"></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="submit" class="btn btn-primary">Ok</button>
+            </div>
+        </div>
+    </form>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
