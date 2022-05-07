@@ -10,16 +10,17 @@
 
     <title>Hello, world!</title>
   </head>
-  <body>
+  <body class="container">
     <h1>Exemplo</h1>
-    <form action="">
+    <form >
         <div class="row">
             <div class="col">
                 <label class="label-control">Valor 1</label>
-                <label class="form-control" name="valor1" type="text"></label>
-
+                <input class="form-control" name="valor1" type="text"></input>
+            </div>
+            <div class="col">
                 <label class="label-control">Valor 2</label>
-                <label class="form-control" name="valor2" type="text"></label>
+                <input class="form-control" name="valor2" type="text"></input>
             </div>
         </div>
         <div class="row">
