@@ -9,8 +9,6 @@ class ClientesDAO{
     public function inserir(Clientes $c){
         try{
             $sql = "INSERT INTO `clientes`( `nome`, `email`, `idade`) VALUES (:nome, :email, :idade)";
-
-
         } catch(\Exception $e){
             return false;
         }
@@ -29,7 +27,12 @@ class ClientesDAO{
     
 
     public function excluir($id){
-        $sql = "DELETE FROM `clientes` WHERE id = :id";
+        try{
+            $sql = "DELETE FROM `clientes` WHERE id = :id";
+
+        } catch(\Exception $e){
+            return false;
+        }
     }
 
 
