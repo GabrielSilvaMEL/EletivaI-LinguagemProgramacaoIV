@@ -9,6 +9,12 @@ class Clientes{
     private $email;
     private $idade;
 
+    
+
+
+
+
+    //set e get
     public function getId(){
         return $this->id;
     }
@@ -16,6 +22,7 @@ class Clientes{
         $this->id = $id;
     }
 
+//
     public function getNome(){
         return $this->nome;
     }
@@ -23,6 +30,7 @@ class Clientes{
         $this->nome = $nome;
     }
 
+//
     public function getEmail(){
         return $this->email;
     }
@@ -30,7 +38,7 @@ class Clientes{
         $this->email = $email;
     }
 
-
+//
     public function getIdade(){
         return $this->idade;
     }
