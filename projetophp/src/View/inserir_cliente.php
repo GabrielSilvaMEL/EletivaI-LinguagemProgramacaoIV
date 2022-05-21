@@ -12,7 +12,7 @@
   <body class="container">
     <h1>Inserir cliente</h1>
 
-    <form action="" method="post">
+    <form action="/cliente/inserir" method="post">
         <div class="row">
 
             <div class="col-5">
@@ -39,7 +39,7 @@
             </div>
 
         </div>
-        
+
         <div class="row">
             <div class="col mt-5">
                 <button type="submit" class="btn btn-primary">
