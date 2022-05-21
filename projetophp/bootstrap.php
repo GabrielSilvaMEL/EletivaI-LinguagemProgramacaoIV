@@ -21,6 +21,7 @@
     $router->post("/exemplo-resultado", 
     'Aluno\projetophp\Controller\ExercicioController::exibirResultado');
 
+    
     $router->get("/cliente/novo",
      "Aluno\projetophp\Controller\ClientesController::abrirFormularioInserir");
 
