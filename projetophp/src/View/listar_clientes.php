@@ -13,7 +13,7 @@
     <?php require_once "barra_navegacao.php";?>
     <div class="container">
         <h1>Clientes</h1>
-
+        <!--Coloração dos botões de erro e sucesso e botão pra fechá-los-->
         <?php 
             if (isset($resposta)){
                 if ($resposta){
@@ -29,7 +29,8 @@
                 }   
             }    
         ?>
-        //table
+
+        <!--table-->
         <table class="table">
         <thead>
             <tr>
