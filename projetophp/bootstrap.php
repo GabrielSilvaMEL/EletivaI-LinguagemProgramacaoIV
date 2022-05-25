@@ -21,12 +21,16 @@
     $router->post("/exemplo-resultado", 
     'Aluno\projetophp\Controller\ExercicioController::exibirResultado');
 
-    /////ROTAS CLIENTE
+    ///////ROTAS CLIENTE
     $router->get("/cliente/novo",
     "Aluno\projetophp\Controller\ClientesController::abrirFormularioInserir");
 
     $router->post("/cliente/inserir", 'Aluno\projetophp\Controller\ClientesController::inserirCliente');
-    //////
+
+    //Vai até o controller ler o método de mostrar os clientes em lista
+    $router->get("/clientes",
+    "Aluno\projetophp\Controller\ClientesController::abrirListaClientes"); 
+    ///////////////////////////
 
 
     //ADICIONAR AS ROTAS VÁLIDAS ACIMA

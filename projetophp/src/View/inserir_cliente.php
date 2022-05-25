@@ -10,6 +10,7 @@
   </head>
 
   <body>
+    <?php require_once "barra_navegacao.php";?>
     <div class="container">
     <h1>Inserir cliente</h1>
 
