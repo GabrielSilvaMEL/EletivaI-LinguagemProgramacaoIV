@@ -48,9 +48,9 @@
             <tr>
                 <th scope="row">    <?= $linha['id'] ?>      </th>
                 <td>                <?= $linha['nome'] ?>    </td>
-                <td>                <?= $linha['id'] ?>      </td>
-                <td>    <a class="btn btn-warning">Alterar</a> 
-                        <a class="btn btn-danger">Excluir</a>        </td>
+                <td>                <?= $linha['email'] ?>      </td>
+                <td>    <a href="/cliente/alterar/<?= $linha['id'] ?>" class="btn btn-warning"> Alterar </a> </td>
+                <td>        <a class="btn btn-danger">Excluir</a> </td>
             </tr>
 
             <?php } ?>
