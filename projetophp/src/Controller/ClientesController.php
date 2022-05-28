@@ -25,6 +25,7 @@ class ClientesController{
         require_once "../src/View/listar_clientes.php";
     }
 
+    //INSERT CLIENT
     public static function inserirCliente(){
         $cliente = new Clientes();
         $cliente->setEmail($_POST["email"]);
@@ -39,6 +40,7 @@ class ClientesController{
         ClientesController::abrirListaClientes();
     }
 
+    //EDIT CLIENT
     public static function editarCliente($params){
         $cliente = new Clientes();
         $cliente->setEmail($_POST["email"]);
@@ -46,7 +48,18 @@ class ClientesController{
         $cliente->setNome($_POST["nome"]);
         $cliente->setId($params[1]);
         $dao = new ClientesDAO();
-        if ($dao->inserir($cliente)){
+        if ($dao->alterar($cliente)){
+            $resposta = true;          
+        } else {
+            $resposta = false;
+        }
+        ClientesController::abrirListaClientes();
+    }
+
+    //DELETE CLIENT
+    public static function excluirCliente($params){
+        $dao = new ClientesDAO();
+        if ($dao->excluir($params[1])){
             $resposta = true;          
         } else {
             $resposta = false;

@@ -22,23 +22,40 @@
     'Aluno\projetophp\Controller\ExercicioController::exibirResultado');
 
     ///////ROTAS CLIENTE
+
+
+
     $router->get("/cliente/novo",
     "Aluno\projetophp\Controller\ClientesController::abrirFormularioInserir");
 
     //insert
     $router->post("/cliente/inserir", 'Aluno\projetophp\Controller\ClientesController::inserirCliente');
 
+
+
     //Vai até o controller ler o método de mostrar os clientes em lista
     $router->get("/clientes",
     "Aluno\projetophp\Controller\ClientesController::abrirListaClientes"); 
+
+
 
     //client alter
     $router->get("/cliente/alterar/{id}",
     "Aluno\projetophp\Controller\ClientesController::abrirFormularioAlterar");
 
+
+
     //edit client
     $router->post("/cliente/editar/{id}",
     'Aluno\projetophp\Controller\ClientesController::editarCliente');
+
+    //delete client
+
+   $router->get("/cliente/excluir/{id}",
+    "Aluno\projetophp\Controller\ClientesController::excluirCliente");
+
+
+
     ///////////////////////////
 
 
