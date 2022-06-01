@@ -59,6 +59,22 @@
     ///////////////////////////
 
 
+    //ROTAS PRODUTO
+
+    $router->get("/produto/novo",
+    "Aluno\projetophp\Controller\ProdutosController::abrirFormularioInserir");
+
+
+
+
+
+
+
+
+
+
+
+
     //ADICIONAR AS ROTAS VÁLIDAS ACIMA
 
     $result = $router->handler(); //o handler verifica se ta escrito correto com caracteres validos. caso não exista o result devolve true ou false
