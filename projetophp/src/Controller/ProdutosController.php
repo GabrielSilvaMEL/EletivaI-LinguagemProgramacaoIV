@@ -37,7 +37,9 @@ class ProdutosController{
         } else {
             $resposta = false;
         }
-        ProdutosController::abrirListaProdutos();
+        $dao = new ProdutosDAO();
+        $resultado = $dao->consultar();
+        require_once "../src/View/listar_produtos.php";
     }
 
     //EDIT CLIENT

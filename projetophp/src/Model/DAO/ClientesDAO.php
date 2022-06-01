@@ -13,8 +13,8 @@ class ClientesDAO{
             $p->bindValue(":nome",$c->getNome());
             $p->bindValue(":email",$c->getEmail());
             $p->bindValue(":idade",$c->getIdade());
-            $p->execute();
-            return $p->fetch();
+            return $p->execute();
+             
         } catch(\Exception $e){
             return false;
         }

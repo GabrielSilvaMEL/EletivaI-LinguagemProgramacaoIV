@@ -49,8 +49,9 @@
                 <th scope="row">    <?= $linha['id'] ?>      </th>
                 <td>                <?= $linha['nome'] ?>    </td>
                 <td>                <?= $linha['descricao'] ?>      </td>
-                <td>    <a href="/produtos/alterar/<?= $linha['id'] ?>" class="btn btn-warning">        Alterar</a> </td>
-                <td>    <a href="/produtos/excluir/<?= $linha['id'] ?>" class="btn btn-danger">         Excluir</a> </td>
+                <td>                <?= $linha['valor'] ?>      </td>
+                <td>    <a href="/produto/alterar/<?= $linha['id'] ?>" class="btn btn-warning">        Alterar</a> </td>
+                <td>    <a href="/produto/excluir/<?= $linha['id'] ?>" class="btn btn-danger">         Excluir</a> </td>
             </tr>
 
             <?php } ?>

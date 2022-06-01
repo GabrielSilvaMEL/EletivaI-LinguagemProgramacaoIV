@@ -7,13 +7,12 @@ use Aluno\projetophp\Model\Entity\Produtos;
 class ProdutosDAO{
     public function inserir(Produtos $pr){
         try{
-            $sql = "INSERT INTO `produtos`( `nome`, `descricao`, `valor`) VALUES (:nome, :descricao, :valor)";
+            $sql = "INSERT INTO produtos(nome, descricao, valor) VALUES (:nome, :descricao, :valor)";
             $p = Conexao::conectar()->prepare($sql);
-            $p->bindValue(":nome",$pr->getNome());
-            $p->bindValue(":descricao",$pr->getDescricao());
-            $p->bindValue(":valor",$pr->getValor());
-            $p->execute();
-            return $p->fetch();
+            $p->bindValue(":nome", $pr->getNome());
+            $p->bindValue(":descricao", $pr->getDescricao());
+            $p->bindValue(":valor", $pr->getValor());
+            return $p->execute();
         } catch(\Exception $e){
             return false;
         }
@@ -37,7 +36,7 @@ class ProdutosDAO{
 
     public function excluir($id){
         try{
-            $sql = "DELETE FROM `clientes` WHERE id = :id";
+            $sql = "DELETE FROM `produtos` WHERE id = :id";
             $p = Conexao::conectar()->prepare($sql);
             $p->bindValue(":id", $id);
             return $p->execute();
@@ -49,7 +48,7 @@ class ProdutosDAO{
 
     public function consultar(){
         try{
-            $sql = "SELECT * FROM clientes";
+            $sql = "SELECT * FROM produtos";
             return Conexao::conectar()->query($sql);
 
         } catch(\Exception $e){
@@ -60,7 +59,7 @@ class ProdutosDAO{
 
     public function consultarPorId($id){
         try{
-            $sql = "SELECT * FROM clientes WHERE id = :id";
+            $sql = "SELECT * FROM produtos WHERE id = :id";
             $p = Conexao::conectar()->prepare($sql);
             $p->bindValue(":id", $id);
             return $p->execute();

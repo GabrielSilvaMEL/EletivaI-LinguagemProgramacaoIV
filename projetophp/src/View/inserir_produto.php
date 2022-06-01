@@ -14,7 +14,7 @@
     <div class="container">
     <h1>Inserir Produto</h1>
 
-    <form action="/produtos/inserir" method="post">
+    <form action="/produto/inserir" method="post">
         <div class="row">
 
                 <div class="col-5">

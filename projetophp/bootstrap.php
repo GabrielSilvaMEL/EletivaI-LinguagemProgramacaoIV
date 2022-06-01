@@ -62,36 +62,27 @@
     //ROTAS PRODUTO
 
     $router->get("/produto/novo",
-    "Aluno\projetophp\Controller\ProdutosController::abrirFormularioInserirProdutos");
+     "Aluno\projetophp\Controller\ProdutosController::abrirFormularioInserirProdutos");
     //insert
     $router->post("/produto/inserir", 'Aluno\projetophp\Controller\ProdutosController::inserirProduto');
 
     //Vai até o controller ler o método de mostrar os clientes em lista
     $router->get("/produtos",
-    "Aluno\projetophp\Controller\ProdutosController::abrirListaProdutos"); 
-
-
+     "Aluno\projetophp\Controller\ProdutosController::abrirListaProdutos"); 
 
     //client alter
     $router->get("/produto/alterar/{id}",
-    "Aluno\projetophp\Controller\ProdutosController::abrirFormularioAlterarProdutos");
+     "Aluno\projetophp\Controller\ProdutosController::abrirFormularioAlterarProdutos");
 
-     //edit client
-     $router->post("/produto/editar/{id}",
+    //edit client
+    $router->post("/produto/editar/{id}",
      'Aluno\projetophp\Controller\ProdutosController::editarProduto');
  
-     //delete client
+    //delete client
  
     $router->get("/produto/excluir/{id}",
      "Aluno\projetophp\Controller\\ProdutosController::excluirProduto");
  
-
-
-
-
-
-
-
     //ADICIONAR AS ROTAS VÁLIDAS ACIMA
 
     $result = $router->handler(); //o handler verifica se ta escrito correto com caracteres validos. caso não exista o result devolve true ou false
