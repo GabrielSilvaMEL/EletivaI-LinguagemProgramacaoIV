@@ -24,7 +24,7 @@ class ProdutosDAO{
             $sql = "UPDATE `produtos` SET `nome`= :nome,`descricao`= :descricao,`valor`=:valor WHERE id = :id";
             $p = Conexao::conectar()->prepare($sql);
             $p->bindValue(":nome",$pr->getNome());
-            $p->bindValue(":valor",$pr->getValor());
+            $p->bindValue(":descricao",$pr->getDescricao());
             $p->bindValue(":valor",$pr->getValor());
             $p->bindValue(":id",$pr->getId());
             return $p->execute();

@@ -61,10 +61,10 @@
 
     //ROTAS PRODUTO
 
-    $router->get("/produtos/novo",
+    $router->get("/produto/novo",
     "Aluno\projetophp\Controller\ProdutosController::abrirFormularioInserirProdutos");
     //insert
-    $router->post("/produtos/inserir", 'Aluno\projetophp\Controller\ProdutosController::inserirProduto');
+    $router->post("/produto/inserir", 'Aluno\projetophp\Controller\ProdutosController::inserirProduto');
 
     //Vai até o controller ler o método de mostrar os clientes em lista
     $router->get("/produtos",
@@ -73,10 +73,18 @@
 
 
     //client alter
-    $router->get("/produtos/alterar/{id}",
+    $router->get("/produto/alterar/{id}",
     "Aluno\projetophp\Controller\ProdutosController::abrirFormularioAlterarProdutos");
 
-
+     //edit client
+     $router->post("/produto/editar/{id}",
+     'Aluno\projetophp\Controller\ProdutosController::editarProduto');
+ 
+     //delete client
+ 
+    $router->get("/produto/excluir/{id}",
+     "Aluno\projetophp\Controller\\ProdutosController::excluirProduto");
+ 
 
 
 

@@ -8,11 +8,11 @@ use Aluno\projetophp\Model\Entity\Produtos;
 
 class ProdutosController{
 
-    public static function abrirFormularioInserir(){
+    public static function abrirFormularioInserirProdutos(){
         require_once "../src/View/inserir_produto.php";
     }
 
-    public static function abrirFormularioAlterar($params){
+    public static function abrirFormularioAlterarProdutos($params){
         $dao = new ProdutosDAO();
         $resultado = $dao->consultarPorId($params[1]);
         require_once "../src/View/alterar_produto.php";

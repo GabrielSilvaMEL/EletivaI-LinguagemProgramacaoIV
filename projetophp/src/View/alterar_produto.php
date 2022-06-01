@@ -14,7 +14,7 @@
     <div class="container">
     <h1>Alterar Produto</h1>
 
-    <form action="/cliente/editar/<?= $params[1] ?>" method="post"> <!--alguma lógica foi feita aqui-->
+    <form action="/produtos/editar/<?= $params[1] ?>" method="post"> <!--alguma lógica foi feita aqui-->
         <div class="row">
 
                 <div class="col-5">
