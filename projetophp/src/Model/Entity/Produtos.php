@@ -25,10 +25,10 @@ class Produtos{
     }
 
     //
-    public function getDescicao(){
+    public function getDescricao(){
         return $this->descricao;
     }
-    public function setDescicao($descricao){
+    public function setDescricao($descricao){
         $this->descricao = $descricao;
     }
 
