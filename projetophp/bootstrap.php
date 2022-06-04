@@ -28,7 +28,7 @@
 
     $router->post("/exercicio1", 
     'Aluno\projetophp\Controller\Exercicio1Controller::exibirResultado');
-
+    
     ///////ROTAS CLIENTE
 
 
