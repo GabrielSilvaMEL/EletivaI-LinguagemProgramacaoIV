@@ -10,41 +10,36 @@
 
     <title>Hello, world!</title>
   </head>
-  <body>
-    <h1>Cálculos</h1>
+  <body class="container">
+    <h1>Exemplo de Envio de Formulário</h1>
+
+    <form method="post" action="/exercicio1">
+        <div class="row">
+            <div class="col">
+              <label for="valor1" class="label-control" >
+                Informe o valor 1:
+              </label>
+              <input type="number" name="valor1" 
+                  id="valor1" class="form-control" value="<?= $valor1['valor1'] ?>"/>
+            </div>
+            <div class="col">
+            <label for="valor2" class="label-control">
+                Informe o valor 2:
+              </label>
+              <input type="number" name="valor2" 
+                  id="valor2" class="form-control"/>
+            </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col">
+              <button type="submit" class="btn btn-danger">
+                Enviar
+              </button>
+          </div>
+        </div>
+    </form>
 
     <?php
-      $valor1 = $_POST['valor1'];
-      $valor2 = $_POST['valor2'];
-      echo "Valor 1 é:  $valor1 e Valor 2 é:  $valor2";
-      echo "<br/>";
-      echo "Soma: ".($valor1 + $valor2);
-      echo "Subtração: ".($valor1 - $valor2);
-      echo "Multiplicação: ".($valor1 * $valor2);
-      if ($valor2 != 0){
-         echo "Divisão: ".($valor1 / $valor2);
-      } else {
-        echo "Não é possível realizar divisão por 0!";
-      }
-      if ($valor1 % 2 == 0)
-        echo "Valor 1 é par!";
-      else 
-        echo "Valor é impar!";
-
-      $resultado = $valor1 % 2 == 0 ? "Valor 1 é par!" 
-                  : "Valor 1 é impar";
-      echo $resultado;
-
-      $i = 10;
-
-      echo "<br/>";
-
-      echo "Valor de i:".(3 * ++$i);
-      
-      echo "<br/>";
-
-      echo "Valor de i:".($i);
-
 
     ?>
 
