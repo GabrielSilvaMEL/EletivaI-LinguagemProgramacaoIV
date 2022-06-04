@@ -4,7 +4,7 @@
 namespace Aluno\projetophp\Controller;
 
 
-class ExercicioController
+class Exercicio2Controller
 {
     public static function exibir(){
         require_once("../src/view/exercicio2.php");

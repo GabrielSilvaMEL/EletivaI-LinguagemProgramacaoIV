@@ -21,14 +21,35 @@
     $router->post("/exemplo-resultado", 
     'Aluno\projetophp\Controller\ExercicioController::exibirResultado');
 
+
+
+
+
+
+
     //////EX1
-    $router->get('/exercicio1v',
+    $router->get('/exercicio1',
     'Aluno\projetophp\Controller\Exercicio1Controller::exibir');
 
 
     $router->post("/exercicio1", 
     'Aluno\projetophp\Controller\Exercicio1Controller::exibirResultado');
-    
+
+    //////EX2
+
+    $router->get('/exercicio2',
+    'Aluno\projetophp\Controller\Exercicio2Controller::exibir');
+
+
+    $router->post("/exercicio2", 
+    'Aluno\projetophp\Controller\Exercicio2Controller::exibirResultado');
+
+
+
+
+
+
+
     ///////ROTAS CLIENTE
 
 

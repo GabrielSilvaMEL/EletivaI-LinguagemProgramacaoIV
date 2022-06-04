@@ -31,12 +31,15 @@
     </form>
 
     <?php
-        if (isset($soma))
-            echo "O valor da soma é $soma";
-
-
-        
+        if (isset($soma)){
+            
     ?>
+        <h5>Resposta</h5>
+    <?php
+        echo "O valor da soma é $soma";
+        }
+        ?>
+
     
 
 
