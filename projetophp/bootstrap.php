@@ -44,11 +44,28 @@
     $router->post("/exercicio2", 
     'Aluno\projetophp\Controller\Exercicio2Controller::exibirResultado');
 
+    //////EX3
+    $router->get('/exercicio3',
+    'Aluno\projetophp\Controller\Exercicio3Controller::exibir');
+
+    $router->post("/exercicio3", 
+    'Aluno\projetophp\Controller\Exercicio3Controller::exibirResultado');
+
+    //////EX4
+    $router->get('/exercicio4',
+    'Aluno\projetophp\Controller\Exercicio4Controller::exibir');
 
 
+    $router->post("/exercicio4", 
+    'Aluno\projetophp\Controller\Exercicio4Controller::exibirResultado');
+
+    ///////EX5
+    $router->get('/exercicio5',
+    'Aluno\projetophp\Controller\Exercicio5Controller::exibir');
 
 
-
+    $router->post("/exercicio5", 
+    'Aluno\projetophp\Controller\Exercicio5Controller::exibirResultado');
 
     ///////ROTAS CLIENTE
 
