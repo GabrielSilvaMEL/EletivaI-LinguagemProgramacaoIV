@@ -42,7 +42,6 @@
             return self:: $contador;
         }
 
-
         //get e set
         public function getX(){
             return $this->x;
