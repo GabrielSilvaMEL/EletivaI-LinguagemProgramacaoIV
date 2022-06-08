@@ -45,8 +45,8 @@ CREATE TABLE IF NOT EXISTS `clientes` (
 DROP TABLE IF EXISTS `produtos`;
 CREATE TABLE IF NOT EXISTS `produtos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` int(150) NOT NULL,
-  `descricao` int(150) NOT NULL,
+  `nome` varchar(150) NOT NULL,
+  `descricao` varchar(150) NOT NULL,
   `valor` decimal(10,0) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
