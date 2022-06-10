@@ -20,7 +20,6 @@ class ClientesDAO{
         }
     }
 
-
     public function alterar(Clientes $c){
         try{
             $sql = "UPDATE `clientes` SET `nome`= :nome,`email`= :email,`idade`=:idade WHERE id = :id";
