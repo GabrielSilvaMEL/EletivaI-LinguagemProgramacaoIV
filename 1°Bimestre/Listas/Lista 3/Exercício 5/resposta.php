@@ -14,10 +14,8 @@
     <h1>exercicio 5</h1>
 
     <?php
-    $altura = $_POST['altura'];
+      $altura = $_POST['altura'];
       $peso = $_POST['peso'];
-
-
 
       function imc($altura, $peso){
       $imc = $peso / $altura;
